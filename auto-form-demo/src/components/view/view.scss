@@ -1,0 +1,144 @@
+.dev-view {
+  width: 60%;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  user-select: none;
+  background-color: rgb(245, 245, 245);
+
+  .display-view {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgb(219, 219, 219);
+  }
+
+  .demo {
+    height: 50px;
+    width: 100%;
+    background-color: ghostwhite;
+    margin: 10px;
+  }
+
+  .nextPos {
+    height: 50px;
+    margin: 10px;
+    width: 100%;
+    background-color: rgb(212, 245, 255);
+  }
+
+  .ref-line-col {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: blue;
+  }
+
+  .ref-line-row {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: blue;
+  }
+
+  .wrap-widget {
+    position: absolute;
+    cursor: pointer;
+    width: fit-content;
+    box-sizing: border-box;
+
+    .form-item {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      transition: .2s;
+    }
+
+    &:hover::after {
+      border: 1px solid rgb(146, 177, 212);
+    }
+
+    &.select::after {
+      background-color: rgb(146, 177, 212);
+      opacity: .5;
+    }
+
+    &.select {
+      .move-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid grey;
+        position: absolute;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+          transform: translate(-50%, -50%) scale(2);
+        }
+
+        &.lt {
+          left: 0;
+          top: 0;
+          cursor: se-resize;
+        }
+
+        &.mt {
+          left: 50%;
+          top: 0;
+          cursor: s-resize;
+        }
+
+        &.rt {
+          left: 100%;
+          top: 0;
+          cursor: ne-resize;
+        }
+
+        &.lm {
+          left: 0;
+          top: 50%;
+          cursor: w-resize;
+        }
+
+        &.rm {
+          left: 100%;
+          top: 50%;
+          cursor: w-resize;
+        }
+
+        &.lb {
+          left: 0;
+          top: 100%;
+          cursor: ne-resize;
+        }
+
+        &.mb {
+          left: 50%;
+          top: 100%;
+          cursor: s-resize;
+        }
+
+        &.rb {
+          left: 100%;
+          top: 100%;
+          cursor: se-resize;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.operators {
+  width: 20%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+
+  .config-list {
+    li {
+      .change-z-index {
+        background-color: #fff;
+
+        span {
+          width: 25px;
+          height: fit-content;
+          display: inline-block;
+          text-align: center;
+          background-color: rgb(140, 162, 211);
+          margin: 5px;
+
+          &:hover {
+            background-color: rgb(84, 124, 209);
+          }
+
+          color: #fff;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

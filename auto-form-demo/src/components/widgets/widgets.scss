@@ -1,0 +1,17 @@
+.widgets {
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+
+  ul {
+    li {
+      width: 100%;
+      height: 100px;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(231, 231, 231);
+      }
+    }
+  }
+}
